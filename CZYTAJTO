@@ -5,3 +5,9 @@ Wykonaj poniższe polecenie:
 #+BEGIN_SRC sh
 sudo ./bootstrap.sh
 #+END_SRC
+** Sprawdzenie
+Uruchom maszynę wirtualną z pomocą narzędzia [[https://www.vagrantup.com][Vagrant]]:
+#+BEGIN_SRC sh
+cd vagrant
+vagrant up
+#+END_SRC

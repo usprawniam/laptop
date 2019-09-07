@@ -1,0 +1,15 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.synced_folder "..", "/repo", type: "rsync",
+    rsync__exclude: [".git/", "vagrant/"]
+
+  # Following is intended to mimic user behavior; more idiomatic would be:
+  # config.vm.provision :shell, path: "../bootstrap.sh"
+  config.vm.provision :prerequisites, type: :shell do |s|
+    s.privileged = false
+    s.inline = "sudo /repo/bootstrap.sh"
+  end
+end
