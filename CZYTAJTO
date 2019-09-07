@@ -1,2 +1,7 @@
 * Laptop
 Zarządzanie konfiguracją laptopa. Wymagania są dostępne w pliku =WYMAGANIA=.
+** Przygotowanie
+Wykonaj poniższe polecenie:
+#+BEGIN_SRC sh
+./bootstrap.sh
+#+END_SRC
