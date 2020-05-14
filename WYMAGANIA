@@ -3,8 +3,20 @@
 ** Możliwie długi czas wsparcia
 ** Oprogramowanie
 *** Internet
-- Przeglądarka
+- Przeglądarki
+  - Firefox
+  - Chromium
 - Klient poczty
 *** Pakiet biurowy
+- Edytor dokumentów
+- Arkusz kalkulacyjny
+*** Edycja grafiki
+- GIMP
 *** Narzędzia
 - [[https://code.visualstudio.com][Visual Studio Code]]
+- [[http://jonls.dk/redshift][Redshift]]
+- [[https://linuxonly.ru/page/modem-manager-gui][Modem Manager GUI]]
+** Obsługa urządzeń
+*** Drukarka
+*** Skaner
+*** Bluetooth
