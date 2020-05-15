@@ -1,5 +1,7 @@
 * case
 Przypadki użycia środowisk wirtualnych.
 ** Struktura katalogów
+*** migration
+Migracja między maszynami.
 *** setup
 Wprowadzenie żądanej konfiguracji.

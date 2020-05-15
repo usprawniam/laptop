@@ -14,5 +14,5 @@ Wykonaj poniższe polecenie:
 Uruchom maszynę wirtualną z pomocą narzędzia [[https://www.vagrantup.com][Vagrant]]:
 #+BEGIN_SRC sh
 cd vagrant/case/$CASE
-vagrant up
+./run.sh || vagrant up
 #+END_SRC

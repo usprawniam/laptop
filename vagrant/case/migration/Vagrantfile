@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+MAIL_DIR='$HOME/.mail'
+MAIL_SUM='sha1sums'
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.define "source" do |s|
+    s.vm.provision "fixture", type: :shell, privileged: false, inline: <<-SHELL
+      mkdir -p #{MAIL_DIR}
+      touch #{MAIL_DIR}/{foo,bar,baz}
+    SHELL
+    s.vm.provision "backup", type: :shell, privileged: false, inline: <<-SHELL
+      MAIL_DIR="$(basename #{MAIL_DIR})"
+      MAIL_BAK="dot_${MAIL_DIR#*.}.tar.bz2"
+      tar cjvf $MAIL_BAK $MAIL_DIR
+      sha1sum $MAIL_BAK > #{MAIL_SUM}
+    SHELL
+  end
+  config.vm.define "target" do |t|
+    t.vm.provision "extract", type: :shell, run: :never, privileged: false, inline: <<-SHELL
+      MAIL_DIR="$(basename #{MAIL_DIR})"
+      MAIL_BAK="dot_${MAIL_DIR#*.}.tar.bz2"
+      sha1sum -c #{MAIL_SUM}
+      tar xf $MAIL_BAK
+    SHELL
+  end
+end
