@@ -13,6 +13,6 @@ Wykonaj poniższe polecenie:
 ** Sprawdzenie (niezależne od =Wykonania=)
 Uruchom maszynę wirtualną z pomocą narzędzia [[https://www.vagrantup.com][Vagrant]]:
 #+BEGIN_SRC sh
-cd vagrant
+cd vagrant/case/$CASE
 vagrant up
 #+END_SRC

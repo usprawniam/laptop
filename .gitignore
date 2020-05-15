@@ -1,2 +1,2 @@
 # Vagrant machine state
-/vagrant/.vagrant/
+/vagrant/case/*/.vagrant/
