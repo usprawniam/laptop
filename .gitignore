@@ -1,2 +1,4 @@
-# Vagrant machine state
+# Vagrant machine state, logs and SSH config
 /vagrant/case/*/.vagrant/
+/vagrant/case/*/ubuntu-bionic-18.04-cloudimg-console.log
+/vagrant/case/migration/ssh-config
